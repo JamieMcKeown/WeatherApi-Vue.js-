@@ -1,0 +1,1 @@
+import tpl from '../utils/avecTemplateHtml'
