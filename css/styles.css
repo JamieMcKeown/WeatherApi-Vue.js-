@@ -3,7 +3,7 @@
 }
 
 body {
-  background-image: url("/images/prism.png");
+  background-image: url("../images/prism.png");
   background-image: repeating-radial-gradient();
 }
 
@@ -12,7 +12,7 @@ body {
   margin-top: 10%;
   width: 450px;
   height: 500px;
-  background-image: url("/images/main.png");
+  background-image: url("../images/main.png");
   filter: grayscale(0.4);
   border: .25px solid black;
   box-shadow: 40px 40px rgba(0, 0, 0, 0.9);
