@@ -64,14 +64,9 @@ export default tpl({
                    
                }
                 let weatherApi = apiJson;
-               
                 this.clicked = false
                 this.nom = weatherApi.name
 
-               
-            
-    
-                
                 this.temp = Math.round(weatherApi.main.temp)
                 this.tempRes = Math.round(weatherApi.main.feels_like)
                 this.desCourte = weatherApi.weather[0].description
@@ -115,13 +110,7 @@ export default tpl({
                     this.rain = true
                     this.prePluie = weatherApi.rain["1h"]
                 }
-                if (weatherApi.weather[0].main === "Snow" && weatherApi.snow["1h"] !== ""){
-                    this.snow = true
-                    this.preNeige = weatherApi.snow["1h"]
-                    
-                }
-                
-
+              
                 // ------------------------------------------------------
 
 

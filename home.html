@@ -1,7 +1,4 @@
 <div>
-
-    
-    
     <form name="myForm"action="#" method="POST" @submit="getWeather" v-if="clicked">
         <div class="form-group">
             <label style="font-size: 18px!important;font-weight: 800;">Entrez un nom de ville : </label>
@@ -13,7 +10,6 @@
         
         <button type="submit" class="btn btn-primary">Soumettre</button>
     </form>
-
     <div v-if="!clicked" class="weatherInfo">
         <div v-bind:class= "{ cold: isCold, 'hot': isHot, 'normal': isNormal}">
 
@@ -22,32 +18,20 @@
                     <h2 > {{ nom }} </h2>
                 </div>
                 <div class="temps">
-                    
                     <h6> Témperature : {{ temp }} </h6>
                     <h6> Témperature Ressenti : {{ tempRes }} </h6>
                 </div>
-                <div>
-                    <img :src="icone" >
-                </div>
-    
             </div>
         </div>
-
         <div class="mainBody">
             <h6>Description : {{ desCourte }}</h6>
             <h6>Vent : {{ ventKmh }} Km/H</h6>
             <h6>Direction du vent : {{ ventDir }}</h6>
-            <h6>Fuseau horaire : {{ fusHor }}</h6>
             <h6 v-if="rain">Accumulation Pluie : {{ prePluie }}mm</h6>
-            <h6 v-if="snow">Accumulation Neige : {{ preNeige }}mm</h6>
             <h6> lever de soleil : {{ levSol }}</h6>
             <h6>coucher de soleil : {{ couchSol }}</h6>
-        </div>
-
-        
+        </div>        
         <button onClick="window.location.reload();" type="button" class="btn btn-primary">Nouveau ville</button>
-
-
     </div>
 </div>
 
